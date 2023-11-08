@@ -1,0 +1,33 @@
+ -- DISTINCT
+ 
+ SELECT
+ 	DISTINCT CATEGORY_CODE # 중복되지 않은걸 세줌
+   FROM tbl_menu
+  ORDER BY CATEGORY_CODE;
+  
+ SELECT
+ 	COUNT(DISTINCT CATEGORY_CODE) # COUNT는 묶음
+   FROM tbl_menu
+  ORDER BY CATEGORY_CODE;
+  
+ -- NULL 값을 포함한 열의 DISTINCT
+ SELECT
+ 	REF_CATEGORY_CODE
+   FROM tbl_category;
+   
+ SELECT
+ 	DISTINCT REF_CATEGORY_CODE
+   FROM tbl_category;
+   
+ -- 열의 여러개인 값의 중복 제거
+ SELECT DISTINCT
+ 	CATEGORY_CODE ,
+ 	ORDERABLE_STATUS
+   FROM tbl_menu
+  ORDER BY category_code;
+  
+  SELECT
+ 	CATEGORY_CODE ,
+ 	ORDERABLE_STATUS
+   FROM tbl_menu
+  ORDER BY category_code;
